@@ -10,8 +10,14 @@ async function connectDB() {
   try {
     await client.connect();
     console.log("MongoDB Connected Successfully");
-    return client.db("hope");
-  } catch (error) {
+    return{
+    // database names there are 3 data base in one cluster shop floor managment.
+     
+    db1 : client.db("hope"),
+    db2 : client.db("data-loading"),
+    //db3 : client.db("status-data")
+  }
+} catch (error) {
     console.log(error);
   }
 }
