@@ -15,7 +15,7 @@ async function connectDB() {
      
     db1 : client.db("hope"),
     db2 : client.db("data-loading"),
-    //db3 : client.db("status-data")
+   // db3 : client.db("resultantData")
   }
 } catch (error) {
     console.log(error);
